@@ -1,0 +1,393 @@
+/* Bütün HTML elemanları için temel ayarlar */
+/* Basic settings for all HTML elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Sayfanın genel görünümü */
+/* General page appearance */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f6f8;
+  color: #20252d;
+}
+
+/* Buton ve giriş alanlarının yazı tipini belirler */
+/* Sets the font of buttons and input fields */
+button,
+input {
+  font: inherit;
+}
+
+
+/* Ana Sayfa - Main Page */
+
+/* Ana içerik alanı */
+/* Main content container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 35px 25px;
+}
+
+/* Dashboard başlığı ve buton yerleşimi */
+/* Dashboard heading and button layout */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+/* Dashboard başlık yazısı */
+/* Dashboard heading text */
+.header h1 {
+  font-size: 30px;
+}
+
+
+/* Butonlar - Buttons */
+
+/* Genel harcama ekleme butonu */
+/* General add expense button */
+.add-button {
+  background-color: #5146e5;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 9px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Harcama ekleme butonunun üzerine gelindiğinde */
+/* When hovering over the add expense button */
+.add-button:hover {
+  background-color: #4035c7;
+}
+
+/* İptal butonunun tasarımı */
+/* Cancel button design */
+.cancel-button {
+  background-color: #eef0f3;
+  color: #333;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+/* İptal butonunun üzerine gelindiğinde */
+/* When hovering over the cancel button */
+.cancel-button:hover {
+  background-color: #e1e4e8;
+}
+
+/* Düzenleme butonu */
+/* Edit button */
+.edit-button {
+  background-color: #eef0f3;
+  color: #333;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+/* Düzenleme butonunun üzerine gelindiğinde */
+/* When hovering over the edit button */
+.edit-button:hover {
+  background-color: #dfe2e7;
+}
+
+/* Silme butonu */
+/* Delete button */
+.delete-button {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+/* Silme butonunun üzerine gelindiğinde */
+/* When hovering over the delete button */
+.delete-button:hover {
+  background-color: #dc2626;
+}
+
+
+/* Kartlar - Cards */
+
+/* Genel kart tasarımı */
+/* General card design */
+.summary-card,
+.expenses-card {
+  background-color: white;
+  border-radius: 14px;
+  padding: 25px;
+  margin-bottom: 22px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+/* Özet kartlarının açıklama yazıları */
+/* Description text inside summary cards */
+.summary-card p {
+  color: #69717d;
+  margin-bottom: 8px;
+}
+
+/* Özet kartlarının tutar yazıları */
+/* Amount text inside summary cards */
+.summary-card h2 {
+  font-size: 27px;
+}
+
+/* Harcama listesi başlığı */
+/* Expense list heading */
+.expenses-card h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+
+/* Harcama Özetleri - Expense Summaries */
+
+/* Harcama özet kartlarının yan yana yerleşimi */
+/* Places expense summary cards side by side */
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 22px;
+}
+
+/* Özet kartlarının alt boşluğunu sıfırlar */
+/* Removes the bottom margin of summary cards */
+.summary-grid .summary-card {
+  margin-bottom: 0;
+}
+
+
+/* Harcama Listesi - Expense List */
+
+/* Harcama listesi satırlarının yerleşimi */
+/* Layout of expense list rows */
+.expense-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 17px 5px;
+  border-bottom: 1px solid #edf0f2;
+}
+
+/* Son harcama satırındaki alt çizgiyi kaldırır */
+/* Removes the bottom border from the last expense row */
+.expense-item:last-child {
+  border-bottom: none;
+}
+
+/* Harcama açıklaması ve tarih alanı */
+/* Expense description and date section */
+.expense-details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Harcama tarihinin görünümü */
+/* Appearance of the expense date */
+.expense-item p {
+  color: #9299a3;
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+/* Harcama tutarı ve işlem butonlarının yerleşimi */
+/* Layout of expense amount and action buttons */
+.expense-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Harcama tutarının görünümü */
+/* Appearance of the expense amount */
+.expense-amount {
+  margin-right: 10px;
+}
+
+/* Henüz harcama bulunmadığında gösterilen mesaj */
+/* Message displayed when no expenses exist */
+.empty-message {
+  color: #9299a3;
+  padding: 20px 0;
+}
+
+
+/* MODAL - Harcama Ekleme Penceresi */
+/* MODAL - Expense Creation Window */
+
+/* Modal arka planını karartır ve pencereyi ortalar */
+/* Darkens the background and centers the modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 1000;
+}
+
+/* Modal penceresinin genel tasarımı */
+/* General design of the modal window */
+.modal {
+  background-color: white;
+  width: 100%;
+  max-width: 430px;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Modal başlığı ve kapatma butonunun yerleşimi */
+/* Layout of the modal heading and close button */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Modal başlık yazısı */
+/* Modal heading text */
+.modal-header h2 {
+  font-size: 21px;
+}
+
+/* Modal kapatma butonu */
+/* Modal close button */
+.close-button {
+  border: none;
+  background: transparent;
+  color: #777;
+  font-size: 27px;
+  cursor: pointer;
+}
+
+/* Modal form etiketleri */
+/* Modal form labels */
+.modal label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #444;
+}
+
+/* Modal giriş alanları */
+/* Modal input fields */
+.modal input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dfe2e7;
+  border-radius: 8px;
+  outline: none;
+}
+
+/* Giriş alanına tıklandığında kenarlık rengini değiştirir */
+/* Changes the border color when an input is focused */
+.modal input:focus {
+  border-color: #5146e5;
+}
+
+/* Modal altındaki butonların yerleşimi */
+/* Layout of buttons at the bottom of the modal */
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+
+/* Responsive Tasarım - Responsive Design */
+
+/* Küçük ekranlar için tasarım ayarları */
+/* Design adjustments for smaller screens */
+@media (max-width: 600px) {
+
+  /* Ana içerik alanının boşluklarını azaltır */
+  /* Reduces spacing in the main content */
+  .container {
+    padding: 20px 15px;
+  }
+
+  /* Dashboard başlığını küçültür */
+  /* Reduces the dashboard heading size */
+  .header h1 {
+    font-size: 24px;
+  }
+
+  /* Buton boyutlarını mobil ekrana uyarlar */
+  /* Adjusts button sizes for mobile screens */
+  .add-button {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  /* Kartların iç boşluklarını azaltır */
+  /* Reduces the inner spacing of cards */
+  .summary-card,
+  .expenses-card {
+    padding: 18px;
+  }
+
+  /* Özet kartlarını alt alta yerleştirir */
+  /* Stacks summary cards vertically */
+  .summary-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  /* Küçük ekranlarda harcama satırlarını düzenler */
+  /* Adjusts expense rows on smaller screens */
+  .expense-item {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* İşlem butonlarının ekrana sığmasını sağlar */
+  /* Ensures action buttons fit within the screen */
+  .expense-actions {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  /* Tutarın diğer butonlardan ayrılmasını sağlar */
+  /* Separates the amount from the other buttons */
+  .expense-amount {
+    margin-right: auto;
+  }
+}
+
+/* Çok küçük ekranlar için modal ayarları */
+/* Modal adjustments for very small screens */
+@media (max-width: 480px) {
+
+  /* Modal iç boşluğunu azaltır */
+  /* Reduces modal inner spacing */
+  .modal {
+    padding: 20px;
+  }
+}
